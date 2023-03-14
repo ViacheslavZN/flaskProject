@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<li>
+    <a href="{{ url_for('users_app.details', user_id=user_id) }}">
+{{ users[user_id] }}
+</a>
+</li>
+</body>
+</html>
