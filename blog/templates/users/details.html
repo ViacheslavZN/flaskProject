@@ -6,6 +6,9 @@
 
 {% block body %}
     <h1>{{ user_name }}</h1>
+    {% if user.is_staff %}
+        <span class="badge bg-secondary">staff</span>
+{% endif %}
 {% endblock %}
 
 <div>
