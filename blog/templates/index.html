@@ -1,16 +1,24 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Users list
+    Users list
 {% endblock %}
 {% block body %}
-    <h1>Users</h1>
-<div>
-    <ul>
-        {% for user_id in users %}
-        <li>{{ users[user_id] }}</li>
-        {% endfor %}
-    </ul>
+    <h1>
+        Hello
+        {% if current_user.is_authenticated %}
+            {{ current_user.username }}
+        {% else %}
+            anon
+        {% endif %}
+    </h1>
 
-</div>
+    <div>
+        <ul>
+            {% for user_id in users %}
+                <li>{{ users[user_id] }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
 {% endblock %}
