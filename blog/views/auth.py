@@ -48,6 +48,7 @@ def logout():
     logout_user()
     return redirect(url_for("index"))
 
+
 @auth_app.route("/secret/")
 @login_required
 def secret_view():
