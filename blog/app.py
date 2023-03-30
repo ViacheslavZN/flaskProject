@@ -7,6 +7,8 @@ from blog.views.auth import login_manager, auth_app
 import os
 from flask_migrate import Migrate
 from blog.security import flask_bcrypt
+from blog.views.authors import authors_app
+
 
 flask_bcrypt.init_app(app)
 
@@ -24,6 +26,7 @@ app = Flask(__name__)
 
 app.register_blueprint(users_app, url_prefix="/users")
 app.register_blueprint(articles_app, url_prefix="/articles")
+app.register_blueprint(authors_app, url_prefix="/authors")
 
 cfg_name = os.environ.get("CONFIG_NAME") or "ProductionConfig"
 app.config.from_object(f"blog.configs.{cfg_name}")

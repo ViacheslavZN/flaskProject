@@ -60,5 +60,12 @@
     </a>
 {% endfor %}
 
+
+{% for (endpoint, label) in [
+                ('users_app.list', 'Users'),
+                ('articles_app.list', 'Articles'),
+                ('authors_app.list', 'Authors'),
+            ] %}
+
 </body>
 </html>
