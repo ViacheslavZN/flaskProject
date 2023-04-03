@@ -1,5 +1,7 @@
 import os
-
+OPENAPI_URL_PREFIX = '/api/swagger'
+OPENAPI_SWAGGER_UI_PATH = '/'
+OPENAPI_SWAGGER_UI_VERSION = '3.22.0'
 
 class BaseConfig(object):
     DEBUG = False
