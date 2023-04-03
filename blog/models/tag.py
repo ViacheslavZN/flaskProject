@@ -5,6 +5,7 @@ from blog.models.article_tag import article_tag_association_table
 
 
 
+
 class Tag(db.Model):
     id = Column(Integer, primary_key=True)
     name = Column(String(32), nullable=False, default="", server_default="")

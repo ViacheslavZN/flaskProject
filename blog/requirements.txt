@@ -1,0 +1,3 @@
+ComboJSONAPI==1.0.5
+apispec==2.0.2
+PyYAML==5.3.1
